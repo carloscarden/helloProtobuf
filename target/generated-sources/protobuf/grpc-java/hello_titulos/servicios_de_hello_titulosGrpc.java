@@ -1,25 +1,13 @@
 package hello_titulos;
 
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.7.0)",
+    value = "by gRPC proto compiler (version 1.56.0)",
     comments = "Source: hello_titulos.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class servicios_de_hello_titulosGrpc {
 
   private servicios_de_hello_titulosGrpc() {}
@@ -27,25 +15,49 @@ public final class servicios_de_hello_titulosGrpc {
   public static final String SERVICE_NAME = "hello_titulos.servicios_de_hello_titulos";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static final io.grpc.MethodDescriptor<hello_titulos.HelloTitulos.hello,
-      hello_titulos.HelloTitulos.hello_respuesta> METHOD_SEND_ID =
-      io.grpc.MethodDescriptor.<hello_titulos.HelloTitulos.hello, hello_titulos.HelloTitulos.hello_respuesta>newBuilder()
-          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName(generateFullMethodName(
-              "hello_titulos.servicios_de_hello_titulos", "send_id"))
-          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              hello_titulos.HelloTitulos.hello.getDefaultInstance()))
-          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-              hello_titulos.HelloTitulos.hello_respuesta.getDefaultInstance()))
-          .setSchemaDescriptor(new servicios_de_hello_titulosMethodDescriptorSupplier("send_id"))
-          .build();
+  private static volatile io.grpc.MethodDescriptor<hello_titulos.HelloTitulos.hello,
+      hello_titulos.HelloTitulos.hello_respuesta> getSendIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "send_id",
+      requestType = hello_titulos.HelloTitulos.hello.class,
+      responseType = hello_titulos.HelloTitulos.hello_respuesta.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<hello_titulos.HelloTitulos.hello,
+      hello_titulos.HelloTitulos.hello_respuesta> getSendIdMethod() {
+    io.grpc.MethodDescriptor<hello_titulos.HelloTitulos.hello, hello_titulos.HelloTitulos.hello_respuesta> getSendIdMethod;
+    if ((getSendIdMethod = servicios_de_hello_titulosGrpc.getSendIdMethod) == null) {
+      synchronized (servicios_de_hello_titulosGrpc.class) {
+        if ((getSendIdMethod = servicios_de_hello_titulosGrpc.getSendIdMethod) == null) {
+          servicios_de_hello_titulosGrpc.getSendIdMethod = getSendIdMethod =
+              io.grpc.MethodDescriptor.<hello_titulos.HelloTitulos.hello, hello_titulos.HelloTitulos.hello_respuesta>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "send_id"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  hello_titulos.HelloTitulos.hello.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  hello_titulos.HelloTitulos.hello_respuesta.getDefaultInstance()))
+              .setSchemaDescriptor(new servicios_de_hello_titulosMethodDescriptorSupplier("send_id"))
+              .build();
+        }
+      }
+    }
+    return getSendIdMethod;
+  }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static servicios_de_hello_titulosStub newStub(io.grpc.Channel channel) {
-    return new servicios_de_hello_titulosStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<servicios_de_hello_titulosStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<servicios_de_hello_titulosStub>() {
+        @java.lang.Override
+        public servicios_de_hello_titulosStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new servicios_de_hello_titulosStub(channel, callOptions);
+        }
+      };
+    return servicios_de_hello_titulosStub.newStub(factory, channel);
   }
 
   /**
@@ -53,7 +65,14 @@ public final class servicios_de_hello_titulosGrpc {
    */
   public static servicios_de_hello_titulosBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new servicios_de_hello_titulosBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<servicios_de_hello_titulosBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<servicios_de_hello_titulosBlockingStub>() {
+        @java.lang.Override
+        public servicios_de_hello_titulosBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new servicios_de_hello_titulosBlockingStub(channel, callOptions);
+        }
+      };
+    return servicios_de_hello_titulosBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -61,48 +80,52 @@ public final class servicios_de_hello_titulosGrpc {
    */
   public static servicios_de_hello_titulosFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new servicios_de_hello_titulosFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<servicios_de_hello_titulosFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<servicios_de_hello_titulosFutureStub>() {
+        @java.lang.Override
+        public servicios_de_hello_titulosFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new servicios_de_hello_titulosFutureStub(channel, callOptions);
+        }
+      };
+    return servicios_de_hello_titulosFutureStub.newStub(factory, channel);
   }
 
   /**
    */
-  public static abstract class servicios_de_hello_titulosImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void sendId(hello_titulos.HelloTitulos.hello request,
+    default void sendId(hello_titulos.HelloTitulos.hello request,
         io.grpc.stub.StreamObserver<hello_titulos.HelloTitulos.hello_respuesta> responseObserver) {
-      asyncUnimplementedUnaryCall(METHOD_SEND_ID, responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            METHOD_SEND_ID,
-            asyncUnaryCall(
-              new MethodHandlers<
-                hello_titulos.HelloTitulos.hello,
-                hello_titulos.HelloTitulos.hello_respuesta>(
-                  this, METHODID_SEND_ID)))
-          .build();
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendIdMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service servicios_de_hello_titulos.
    */
-  public static final class servicios_de_hello_titulosStub extends io.grpc.stub.AbstractStub<servicios_de_hello_titulosStub> {
-    private servicios_de_hello_titulosStub(io.grpc.Channel channel) {
-      super(channel);
-    }
+  public static abstract class servicios_de_hello_titulosImplBase
+      implements io.grpc.BindableService, AsyncService {
 
-    private servicios_de_hello_titulosStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return servicios_de_hello_titulosGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service servicios_de_hello_titulos.
+   */
+  public static final class servicios_de_hello_titulosStub
+      extends io.grpc.stub.AbstractAsyncStub<servicios_de_hello_titulosStub> {
+    private servicios_de_hello_titulosStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected servicios_de_hello_titulosStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected servicios_de_hello_titulosStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new servicios_de_hello_titulosStub(channel, callOptions);
     }
 
@@ -110,52 +133,48 @@ public final class servicios_de_hello_titulosGrpc {
      */
     public void sendId(hello_titulos.HelloTitulos.hello request,
         io.grpc.stub.StreamObserver<hello_titulos.HelloTitulos.hello_respuesta> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(METHOD_SEND_ID, getCallOptions()), request, responseObserver);
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendIdMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service servicios_de_hello_titulos.
    */
-  public static final class servicios_de_hello_titulosBlockingStub extends io.grpc.stub.AbstractStub<servicios_de_hello_titulosBlockingStub> {
-    private servicios_de_hello_titulosBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private servicios_de_hello_titulosBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class servicios_de_hello_titulosBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<servicios_de_hello_titulosBlockingStub> {
+    private servicios_de_hello_titulosBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected servicios_de_hello_titulosBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected servicios_de_hello_titulosBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new servicios_de_hello_titulosBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public hello_titulos.HelloTitulos.hello_respuesta sendId(hello_titulos.HelloTitulos.hello request) {
-      return blockingUnaryCall(
-          getChannel(), METHOD_SEND_ID, getCallOptions(), request);
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendIdMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service servicios_de_hello_titulos.
    */
-  public static final class servicios_de_hello_titulosFutureStub extends io.grpc.stub.AbstractStub<servicios_de_hello_titulosFutureStub> {
-    private servicios_de_hello_titulosFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private servicios_de_hello_titulosFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class servicios_de_hello_titulosFutureStub
+      extends io.grpc.stub.AbstractFutureStub<servicios_de_hello_titulosFutureStub> {
+    private servicios_de_hello_titulosFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected servicios_de_hello_titulosFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected servicios_de_hello_titulosFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new servicios_de_hello_titulosFutureStub(channel, callOptions);
     }
 
@@ -163,8 +182,8 @@ public final class servicios_de_hello_titulosGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<hello_titulos.HelloTitulos.hello_respuesta> sendId(
         hello_titulos.HelloTitulos.hello request) {
-      return futureUnaryCall(
-          getChannel().newCall(METHOD_SEND_ID, getCallOptions()), request);
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendIdMethod(), getCallOptions()), request);
     }
   }
 
@@ -175,10 +194,10 @@ public final class servicios_de_hello_titulosGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final servicios_de_hello_titulosImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(servicios_de_hello_titulosImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -205,6 +224,18 @@ public final class servicios_de_hello_titulosGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSendIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              hello_titulos.HelloTitulos.hello,
+              hello_titulos.HelloTitulos.hello_respuesta>(
+                service, METHODID_SEND_ID)))
+        .build();
   }
 
   private static abstract class servicios_de_hello_titulosBaseDescriptorSupplier
@@ -252,7 +283,7 @@ public final class servicios_de_hello_titulosGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new servicios_de_hello_titulosFileDescriptorSupplier())
-              .addMethod(METHOD_SEND_ID)
+              .addMethod(getSendIdMethod())
               .build();
         }
       }

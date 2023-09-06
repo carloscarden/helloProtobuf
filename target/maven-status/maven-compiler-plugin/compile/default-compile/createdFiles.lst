@@ -10,8 +10,10 @@ com\example\App.class
 hello_titulos\servicios_de_hello_titulosGrpc$1.class
 hello_titulos\servicios_de_hello_titulosGrpc$servicios_de_hello_titulosStub.class
 hello_titulos\HelloTitulos.class
+hello_titulos\servicios_de_hello_titulosGrpc$3.class
 hello_titulos\servicios_de_hello_titulosGrpc$servicios_de_hello_titulosMethodDescriptorSupplier.class
 hello_titulos\HelloTitulos$hello_respuesta.class
+hello_titulos\servicios_de_hello_titulosGrpc$AsyncService.class
 hello_titulos\HelloTitulos$hello.class
 com\example\GrpcChannel.class
 hello_titulos\servicios_de_hello_titulosGrpc$servicios_de_hello_titulosImplBase.class
@@ -23,3 +25,4 @@ hello_titulos\servicios_de_hello_titulosGrpc$servicios_de_hello_titulosFutureStu
 com\example\BearerToken$1.class
 hello_titulos\servicios_de_hello_titulosGrpc$MethodHandlers.class
 hello_titulos\HelloTitulos$hello$1.class
+hello_titulos\servicios_de_hello_titulosGrpc$2.class
