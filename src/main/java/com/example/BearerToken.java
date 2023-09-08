@@ -15,18 +15,15 @@ public class BearerToken extends CallCredentials {
     }
 
     @Override
-    public void applyRequestMetadata(RequestInfo requestInfo, Executor executor,final MetadataApplier metadataApplier) {
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Metadata headers = new Metadata();
-                    headers.put(Constants.AUTHORIZATION_METADATA_KEY,
-                            String.format("%s%s", Constants.BEARER_TYPE, value));
-                    metadataApplier.apply(headers);
-                } catch (Throwable e) {
-                    metadataApplier.fail(Status.UNAUTHENTICATED.withCause(e));
-                }
+    public void applyRequestMetadata(RequestInfo requestInfo, Executor executor,   MetadataApplier metadataApplier) {
+        executor.execute(() -> {
+            try {
+                Metadata headers = new Metadata();
+                headers.put(Constants.AUTHORIZATION_METADATA_KEY,
+                        String.format("%s%s", Constants.BEARER_TYPE, value));
+                metadataApplier.apply(headers);
+            } catch (Throwable e) {
+                metadataApplier.fail(Status.UNAUTHENTICATED.withCause(e));
             }
         });
     }
