@@ -1,0 +1,104 @@
+syntax = "proto3";
+package data_analytics;
+
+// To import Timestamp, follow instructions in this link:
+// https://grpc.io/docs/protoc-installation/#install-pre-compiled-binaries-any-os
+import "google/protobuf/timestamp.proto";
+
+service servicios {
+  rpc consulta_analitico_stream (stream consulta) returns (stream consulta_respuesta) {}
+  rpc enviar_analitico_con_firma_stream (stream analitico_con_firma) returns (stream analitico_respuesta) {}
+  rpc enviar_analitico_sin_firma_stream (stream contenido_analitico) returns (stream analitico_respuesta) {}
+}
+message analitico_con_firma {
+ contenido_analitico contenido_analitico = 1;
+ firma_digital firma_digital = 2;
+}
+message firma_electronica {
+ string apellido_firmante = 1;
+ string nombre_firmante = 2;
+ string cuit = 3;
+ string cargo = 4;
+}
+message aprobacion {
+ string anio = 1;
+ repeated anio obtuvo = 2;
+}
+message anio {
+ string espacio_curricular = 1;
+ string calificacion = 2;
+ int32 id_condicion = 3;
+ string mes = 4;
+ string anio = 5;
+ string establecimiento_cueanexo = 6;
+ int32 id_establecimiento_cueanexo = 7;
+}
+
+message contenido_analitico {
+ string genero = 1;   
+ int32 tipo_documento = 2;
+ string documento = 3;
+ string apellidos = 4;
+ string nombres = 5;
+ string cuil = 6;
+ google.protobuf.Timestamp nacimiento_alumno_fecha_anio = 7;
+ string nacimiento_alumno_localidad = 8;
+ string nacimiento_alumno_provincia = 9;
+ string nacimiento_alumno_pais = 10; 
+ int32 id_provincia = 11;
+ string provincia = 12;
+ string establecimiento = 13;
+ string cueanexo = 14;
+ string direccion_cueanexo = 15;
+ string localidad_cueanexo = 16;
+ string departamento_cueanexo = 17; 
+ string cp_cueanexo = 18;
+ string tipo_certificado = 19;
+ string titulo_obtenido = 20;
+ int32 id_titulo = 21;
+ int32 id_nivel = 22;
+ google.protobuf.Timestamp fecha_egreso = 23;
+ string ley_provincial = 24;
+ string cartera_educativa = 25;
+ string area_cartera_educativa = 26;
+ string normativa_jurisdiccional = 27;
+ repeated string normativa_rm = 28;
+ repeated string normativa_dis = 29;
+ string libro_matriz = 30;
+ string folio = 31;
+ repeated aprobacion aprobaciones = 32;
+ float promedio = 33;
+ string observaciones = 34; 
+ repeated firma_electronica firmas_electronicas = 35;
+ int32 external_id = 36;
+}
+message firma_digital {
+  string cuit_firmante_digital = 1;
+  string algoritmo_firma = 2;
+  string algoritmo_firma_hash = 3;
+  google.protobuf.Timestamp fecha_hora_firma_algoritmo = 4;
+  string huella_digital = 5;
+  string certificado_publico_firmante = 6;
+}
+message analitico_respuesta {
+ int32 id_analitico = 1;
+ int32 id_estado = 2;
+ string mensaje_estado = 3;
+ int32 tipo_documento = 4;
+ string documento = 5;
+ string genero = 6;
+ string fecha_hora = 7;
+}
+message consulta {
+ int32 id_analitico = 1;
+}
+message consulta_respuesta {
+ int32 id_estado = 1;
+ int32 tipo_documento = 2;
+ string documento = 3;
+ string genero = 4;
+ string numero_serie = 5;
+ string fecha_hora = 6;
+ string apellido_nombre_firmante_digital = 7;
+ string url_titulo = 8;
+}
