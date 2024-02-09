@@ -66,6 +66,19 @@ public final class serviciosGrpc {
               data_analytics.CourseworkCertificate.analitico_respuesta.getDefaultInstance()))
           .setSchemaDescriptor(new serviciosMethodDescriptorSupplier("enviar_analitico_sin_firma_stream"))
           .build();
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  public static final io.grpc.MethodDescriptor<data_analytics.CourseworkCertificate.editar_contenido_analitico,
+      data_analytics.CourseworkCertificate.analitico_respuesta> METHOD_EDITAR_ANALITICO_SIN_FIRMA_STREAM =
+      io.grpc.MethodDescriptor.<data_analytics.CourseworkCertificate.editar_contenido_analitico, data_analytics.CourseworkCertificate.analitico_respuesta>newBuilder()
+          .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+          .setFullMethodName(generateFullMethodName(
+              "data_analytics.servicios", "editar_analitico_sin_firma_stream"))
+          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              data_analytics.CourseworkCertificate.editar_contenido_analitico.getDefaultInstance()))
+          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              data_analytics.CourseworkCertificate.analitico_respuesta.getDefaultInstance()))
+          .setSchemaDescriptor(new serviciosMethodDescriptorSupplier("editar_analitico_sin_firma_stream"))
+          .build();
 
   /**
    * Creates a new async stub that supports all call types for the service
@@ -115,6 +128,13 @@ public final class serviciosGrpc {
       return asyncUnimplementedStreamingCall(METHOD_ENVIAR_ANALITICO_SIN_FIRMA_STREAM, responseObserver);
     }
 
+    /**
+     */
+    public io.grpc.stub.StreamObserver<data_analytics.CourseworkCertificate.editar_contenido_analitico> editarAnaliticoSinFirmaStream(
+        io.grpc.stub.StreamObserver<data_analytics.CourseworkCertificate.analitico_respuesta> responseObserver) {
+      return asyncUnimplementedStreamingCall(METHOD_EDITAR_ANALITICO_SIN_FIRMA_STREAM, responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -138,6 +158,13 @@ public final class serviciosGrpc {
                 data_analytics.CourseworkCertificate.contenido_analitico,
                 data_analytics.CourseworkCertificate.analitico_respuesta>(
                   this, METHODID_ENVIAR_ANALITICO_SIN_FIRMA_STREAM)))
+          .addMethod(
+            METHOD_EDITAR_ANALITICO_SIN_FIRMA_STREAM,
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                data_analytics.CourseworkCertificate.editar_contenido_analitico,
+                data_analytics.CourseworkCertificate.analitico_respuesta>(
+                  this, METHODID_EDITAR_ANALITICO_SIN_FIRMA_STREAM)))
           .build();
     }
   }
@@ -183,6 +210,14 @@ public final class serviciosGrpc {
       return asyncBidiStreamingCall(
           getChannel().newCall(METHOD_ENVIAR_ANALITICO_SIN_FIRMA_STREAM, getCallOptions()), responseObserver);
     }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<data_analytics.CourseworkCertificate.editar_contenido_analitico> editarAnaliticoSinFirmaStream(
+        io.grpc.stub.StreamObserver<data_analytics.CourseworkCertificate.analitico_respuesta> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(METHOD_EDITAR_ANALITICO_SIN_FIRMA_STREAM, getCallOptions()), responseObserver);
+    }
   }
 
   /**
@@ -226,6 +261,7 @@ public final class serviciosGrpc {
   private static final int METHODID_CONSULTA_ANALITICO_STREAM = 0;
   private static final int METHODID_ENVIAR_ANALITICO_CON_FIRMA_STREAM = 1;
   private static final int METHODID_ENVIAR_ANALITICO_SIN_FIRMA_STREAM = 2;
+  private static final int METHODID_EDITAR_ANALITICO_SIN_FIRMA_STREAM = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -262,6 +298,9 @@ public final class serviciosGrpc {
               (io.grpc.stub.StreamObserver<data_analytics.CourseworkCertificate.analitico_respuesta>) responseObserver);
         case METHODID_ENVIAR_ANALITICO_SIN_FIRMA_STREAM:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.enviarAnaliticoSinFirmaStream(
+              (io.grpc.stub.StreamObserver<data_analytics.CourseworkCertificate.analitico_respuesta>) responseObserver);
+        case METHODID_EDITAR_ANALITICO_SIN_FIRMA_STREAM:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.editarAnaliticoSinFirmaStream(
               (io.grpc.stub.StreamObserver<data_analytics.CourseworkCertificate.analitico_respuesta>) responseObserver);
         default:
           throw new AssertionError();
@@ -317,6 +356,7 @@ public final class serviciosGrpc {
               .addMethod(METHOD_CONSULTA_ANALITICO_STREAM)
               .addMethod(METHOD_ENVIAR_ANALITICO_CON_FIRMA_STREAM)
               .addMethod(METHOD_ENVIAR_ANALITICO_SIN_FIRMA_STREAM)
+              .addMethod(METHOD_EDITAR_ANALITICO_SIN_FIRMA_STREAM)
               .build();
         }
       }

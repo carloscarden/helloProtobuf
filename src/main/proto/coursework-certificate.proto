@@ -9,6 +9,7 @@ service servicios {
   rpc consulta_analitico_stream (stream consulta) returns (stream consulta_respuesta) {}
   rpc enviar_analitico_con_firma_stream (stream analitico_con_firma) returns (stream analitico_respuesta) {}
   rpc enviar_analitico_sin_firma_stream (stream contenido_analitico) returns (stream analitico_respuesta) {}
+  rpc editar_analitico_sin_firma_stream (stream editar_contenido_analitico) returns (stream analitico_respuesta) {}
 }
 message analitico_con_firma {
  contenido_analitico contenido_analitico = 1;
@@ -72,6 +73,10 @@ message contenido_analitico {
  repeated firma_electronica firmas_electronicas = 35;
  int32 external_id = 36;
 }
+message editar_contenido_analitico { 
+  int32 id = 1;
+  contenido_analitico contenido_analitico = 2;
+}
 message firma_digital {
   string cuit_firmante_digital = 1;
   string algoritmo_firma = 2;
@@ -101,4 +106,6 @@ message consulta_respuesta {
  string fecha_hora = 6;
  string apellido_nombre_firmante_digital = 7;
  string url_titulo = 8;
+ int32 id_analitico = 9;
+ int32 external_id = 10;
 }

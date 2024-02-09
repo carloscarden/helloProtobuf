@@ -9372,6 +9372,648 @@ public final class CourseworkCertificate {
 
   }
 
+  public interface editar_contenido_analiticoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:data_analytics.editar_contenido_analitico)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 id = 1;</code>
+     */
+    int getId();
+
+    /**
+     * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+     */
+    boolean hasContenidoAnalitico();
+    /**
+     * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+     */
+    data_analytics.CourseworkCertificate.contenido_analitico getContenidoAnalitico();
+    /**
+     * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+     */
+    data_analytics.CourseworkCertificate.contenido_analiticoOrBuilder getContenidoAnaliticoOrBuilder();
+  }
+  /**
+   * Protobuf type {@code data_analytics.editar_contenido_analitico}
+   */
+  public  static final class editar_contenido_analitico extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:data_analytics.editar_contenido_analitico)
+      editar_contenido_analiticoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use editar_contenido_analitico.newBuilder() to construct.
+    private editar_contenido_analitico(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private editar_contenido_analitico() {
+      id_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private editar_contenido_analitico(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              id_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              data_analytics.CourseworkCertificate.contenido_analitico.Builder subBuilder = null;
+              if (contenidoAnalitico_ != null) {
+                subBuilder = contenidoAnalitico_.toBuilder();
+              }
+              contenidoAnalitico_ = input.readMessage(data_analytics.CourseworkCertificate.contenido_analitico.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(contenidoAnalitico_);
+                contenidoAnalitico_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return data_analytics.CourseworkCertificate.internal_static_data_analytics_editar_contenido_analitico_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return data_analytics.CourseworkCertificate.internal_static_data_analytics_editar_contenido_analitico_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              data_analytics.CourseworkCertificate.editar_contenido_analitico.class, data_analytics.CourseworkCertificate.editar_contenido_analitico.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>int32 id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int CONTENIDO_ANALITICO_FIELD_NUMBER = 2;
+    private data_analytics.CourseworkCertificate.contenido_analitico contenidoAnalitico_;
+    /**
+     * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+     */
+    public boolean hasContenidoAnalitico() {
+      return contenidoAnalitico_ != null;
+    }
+    /**
+     * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+     */
+    public data_analytics.CourseworkCertificate.contenido_analitico getContenidoAnalitico() {
+      return contenidoAnalitico_ == null ? data_analytics.CourseworkCertificate.contenido_analitico.getDefaultInstance() : contenidoAnalitico_;
+    }
+    /**
+     * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+     */
+    public data_analytics.CourseworkCertificate.contenido_analiticoOrBuilder getContenidoAnaliticoOrBuilder() {
+      return getContenidoAnalitico();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0) {
+        output.writeInt32(1, id_);
+      }
+      if (contenidoAnalitico_ != null) {
+        output.writeMessage(2, getContenidoAnalitico());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (contenidoAnalitico_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getContenidoAnalitico());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof data_analytics.CourseworkCertificate.editar_contenido_analitico)) {
+        return super.equals(obj);
+      }
+      data_analytics.CourseworkCertificate.editar_contenido_analitico other = (data_analytics.CourseworkCertificate.editar_contenido_analitico) obj;
+
+      boolean result = true;
+      result = result && (getId()
+          == other.getId());
+      result = result && (hasContenidoAnalitico() == other.hasContenidoAnalitico());
+      if (hasContenidoAnalitico()) {
+        result = result && getContenidoAnalitico()
+            .equals(other.getContenidoAnalitico());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
+      if (hasContenidoAnalitico()) {
+        hash = (37 * hash) + CONTENIDO_ANALITICO_FIELD_NUMBER;
+        hash = (53 * hash) + getContenidoAnalitico().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(data_analytics.CourseworkCertificate.editar_contenido_analitico prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code data_analytics.editar_contenido_analitico}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:data_analytics.editar_contenido_analitico)
+        data_analytics.CourseworkCertificate.editar_contenido_analiticoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return data_analytics.CourseworkCertificate.internal_static_data_analytics_editar_contenido_analitico_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return data_analytics.CourseworkCertificate.internal_static_data_analytics_editar_contenido_analitico_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                data_analytics.CourseworkCertificate.editar_contenido_analitico.class, data_analytics.CourseworkCertificate.editar_contenido_analitico.Builder.class);
+      }
+
+      // Construct using data_analytics.CourseworkCertificate.editar_contenido_analitico.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+
+        if (contenidoAnaliticoBuilder_ == null) {
+          contenidoAnalitico_ = null;
+        } else {
+          contenidoAnalitico_ = null;
+          contenidoAnaliticoBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return data_analytics.CourseworkCertificate.internal_static_data_analytics_editar_contenido_analitico_descriptor;
+      }
+
+      public data_analytics.CourseworkCertificate.editar_contenido_analitico getDefaultInstanceForType() {
+        return data_analytics.CourseworkCertificate.editar_contenido_analitico.getDefaultInstance();
+      }
+
+      public data_analytics.CourseworkCertificate.editar_contenido_analitico build() {
+        data_analytics.CourseworkCertificate.editar_contenido_analitico result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public data_analytics.CourseworkCertificate.editar_contenido_analitico buildPartial() {
+        data_analytics.CourseworkCertificate.editar_contenido_analitico result = new data_analytics.CourseworkCertificate.editar_contenido_analitico(this);
+        result.id_ = id_;
+        if (contenidoAnaliticoBuilder_ == null) {
+          result.contenidoAnalitico_ = contenidoAnalitico_;
+        } else {
+          result.contenidoAnalitico_ = contenidoAnaliticoBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof data_analytics.CourseworkCertificate.editar_contenido_analitico) {
+          return mergeFrom((data_analytics.CourseworkCertificate.editar_contenido_analitico)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(data_analytics.CourseworkCertificate.editar_contenido_analitico other) {
+        if (other == data_analytics.CourseworkCertificate.editar_contenido_analitico.getDefaultInstance()) return this;
+        if (other.getId() != 0) {
+          setId(other.getId());
+        }
+        if (other.hasContenidoAnalitico()) {
+          mergeContenidoAnalitico(other.getContenidoAnalitico());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        data_analytics.CourseworkCertificate.editar_contenido_analitico parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (data_analytics.CourseworkCertificate.editar_contenido_analitico) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int id_ ;
+      /**
+       * <code>int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>int32 id = 1;</code>
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private data_analytics.CourseworkCertificate.contenido_analitico contenidoAnalitico_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          data_analytics.CourseworkCertificate.contenido_analitico, data_analytics.CourseworkCertificate.contenido_analitico.Builder, data_analytics.CourseworkCertificate.contenido_analiticoOrBuilder> contenidoAnaliticoBuilder_;
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      public boolean hasContenidoAnalitico() {
+        return contenidoAnaliticoBuilder_ != null || contenidoAnalitico_ != null;
+      }
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      public data_analytics.CourseworkCertificate.contenido_analitico getContenidoAnalitico() {
+        if (contenidoAnaliticoBuilder_ == null) {
+          return contenidoAnalitico_ == null ? data_analytics.CourseworkCertificate.contenido_analitico.getDefaultInstance() : contenidoAnalitico_;
+        } else {
+          return contenidoAnaliticoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      public Builder setContenidoAnalitico(data_analytics.CourseworkCertificate.contenido_analitico value) {
+        if (contenidoAnaliticoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          contenidoAnalitico_ = value;
+          onChanged();
+        } else {
+          contenidoAnaliticoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      public Builder setContenidoAnalitico(
+          data_analytics.CourseworkCertificate.contenido_analitico.Builder builderForValue) {
+        if (contenidoAnaliticoBuilder_ == null) {
+          contenidoAnalitico_ = builderForValue.build();
+          onChanged();
+        } else {
+          contenidoAnaliticoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      public Builder mergeContenidoAnalitico(data_analytics.CourseworkCertificate.contenido_analitico value) {
+        if (contenidoAnaliticoBuilder_ == null) {
+          if (contenidoAnalitico_ != null) {
+            contenidoAnalitico_ =
+              data_analytics.CourseworkCertificate.contenido_analitico.newBuilder(contenidoAnalitico_).mergeFrom(value).buildPartial();
+          } else {
+            contenidoAnalitico_ = value;
+          }
+          onChanged();
+        } else {
+          contenidoAnaliticoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      public Builder clearContenidoAnalitico() {
+        if (contenidoAnaliticoBuilder_ == null) {
+          contenidoAnalitico_ = null;
+          onChanged();
+        } else {
+          contenidoAnalitico_ = null;
+          contenidoAnaliticoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      public data_analytics.CourseworkCertificate.contenido_analitico.Builder getContenidoAnaliticoBuilder() {
+        
+        onChanged();
+        return getContenidoAnaliticoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      public data_analytics.CourseworkCertificate.contenido_analiticoOrBuilder getContenidoAnaliticoOrBuilder() {
+        if (contenidoAnaliticoBuilder_ != null) {
+          return contenidoAnaliticoBuilder_.getMessageOrBuilder();
+        } else {
+          return contenidoAnalitico_ == null ?
+              data_analytics.CourseworkCertificate.contenido_analitico.getDefaultInstance() : contenidoAnalitico_;
+        }
+      }
+      /**
+       * <code>.data_analytics.contenido_analitico contenido_analitico = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          data_analytics.CourseworkCertificate.contenido_analitico, data_analytics.CourseworkCertificate.contenido_analitico.Builder, data_analytics.CourseworkCertificate.contenido_analiticoOrBuilder> 
+          getContenidoAnaliticoFieldBuilder() {
+        if (contenidoAnaliticoBuilder_ == null) {
+          contenidoAnaliticoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              data_analytics.CourseworkCertificate.contenido_analitico, data_analytics.CourseworkCertificate.contenido_analitico.Builder, data_analytics.CourseworkCertificate.contenido_analiticoOrBuilder>(
+                  getContenidoAnalitico(),
+                  getParentForChildren(),
+                  isClean());
+          contenidoAnalitico_ = null;
+        }
+        return contenidoAnaliticoBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:data_analytics.editar_contenido_analitico)
+    }
+
+    // @@protoc_insertion_point(class_scope:data_analytics.editar_contenido_analitico)
+    private static final data_analytics.CourseworkCertificate.editar_contenido_analitico DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new data_analytics.CourseworkCertificate.editar_contenido_analitico();
+    }
+
+    public static data_analytics.CourseworkCertificate.editar_contenido_analitico getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<editar_contenido_analitico>
+        PARSER = new com.google.protobuf.AbstractParser<editar_contenido_analitico>() {
+      public editar_contenido_analitico parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new editar_contenido_analitico(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<editar_contenido_analitico> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<editar_contenido_analitico> getParserForType() {
+      return PARSER;
+    }
+
+    public data_analytics.CourseworkCertificate.editar_contenido_analitico getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface firma_digitalOrBuilder extends
       // @@protoc_insertion_point(interface_extends:data_analytics.firma_digital)
       com.google.protobuf.MessageOrBuilder {
@@ -12279,6 +12921,16 @@ public final class CourseworkCertificate {
      */
     com.google.protobuf.ByteString
         getUrlTituloBytes();
+
+    /**
+     * <code>int32 id_analitico = 9;</code>
+     */
+    int getIdAnalitico();
+
+    /**
+     * <code>int32 external_id = 10;</code>
+     */
+    int getExternalId();
   }
   /**
    * Protobuf type {@code data_analytics.consulta_respuesta}
@@ -12301,6 +12953,8 @@ public final class CourseworkCertificate {
       fechaHora_ = "";
       apellidoNombreFirmanteDigital_ = "";
       urlTitulo_ = "";
+      idAnalitico_ = 0;
+      externalId_ = 0;
     }
 
     @java.lang.Override
@@ -12375,6 +13029,16 @@ public final class CourseworkCertificate {
               java.lang.String s = input.readStringRequireUtf8();
 
               urlTitulo_ = s;
+              break;
+            }
+            case 72: {
+
+              idAnalitico_ = input.readInt32();
+              break;
+            }
+            case 80: {
+
+              externalId_ = input.readInt32();
               break;
             }
           }
@@ -12623,6 +13287,24 @@ public final class CourseworkCertificate {
       }
     }
 
+    public static final int ID_ANALITICO_FIELD_NUMBER = 9;
+    private int idAnalitico_;
+    /**
+     * <code>int32 id_analitico = 9;</code>
+     */
+    public int getIdAnalitico() {
+      return idAnalitico_;
+    }
+
+    public static final int EXTERNAL_ID_FIELD_NUMBER = 10;
+    private int externalId_;
+    /**
+     * <code>int32 external_id = 10;</code>
+     */
+    public int getExternalId() {
+      return externalId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -12659,6 +13341,12 @@ public final class CourseworkCertificate {
       if (!getUrlTituloBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, urlTitulo_);
       }
+      if (idAnalitico_ != 0) {
+        output.writeInt32(9, idAnalitico_);
+      }
+      if (externalId_ != 0) {
+        output.writeInt32(10, externalId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12693,6 +13381,14 @@ public final class CourseworkCertificate {
       if (!getUrlTituloBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, urlTitulo_);
       }
+      if (idAnalitico_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, idAnalitico_);
+      }
+      if (externalId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, externalId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12725,6 +13421,10 @@ public final class CourseworkCertificate {
           .equals(other.getApellidoNombreFirmanteDigital());
       result = result && getUrlTitulo()
           .equals(other.getUrlTitulo());
+      result = result && (getIdAnalitico()
+          == other.getIdAnalitico());
+      result = result && (getExternalId()
+          == other.getExternalId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -12752,6 +13452,10 @@ public final class CourseworkCertificate {
       hash = (53 * hash) + getApellidoNombreFirmanteDigital().hashCode();
       hash = (37 * hash) + URL_TITULO_FIELD_NUMBER;
       hash = (53 * hash) + getUrlTitulo().hashCode();
+      hash = (37 * hash) + ID_ANALITICO_FIELD_NUMBER;
+      hash = (53 * hash) + getIdAnalitico();
+      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12897,6 +13601,10 @@ public final class CourseworkCertificate {
 
         urlTitulo_ = "";
 
+        idAnalitico_ = 0;
+
+        externalId_ = 0;
+
         return this;
       }
 
@@ -12927,6 +13635,8 @@ public final class CourseworkCertificate {
         result.fechaHora_ = fechaHora_;
         result.apellidoNombreFirmanteDigital_ = apellidoNombreFirmanteDigital_;
         result.urlTitulo_ = urlTitulo_;
+        result.idAnalitico_ = idAnalitico_;
+        result.externalId_ = externalId_;
         onBuilt();
         return result;
       }
@@ -12997,6 +13707,12 @@ public final class CourseworkCertificate {
         if (!other.getUrlTitulo().isEmpty()) {
           urlTitulo_ = other.urlTitulo_;
           onChanged();
+        }
+        if (other.getIdAnalitico() != 0) {
+          setIdAnalitico(other.getIdAnalitico());
+        }
+        if (other.getExternalId() != 0) {
+          setExternalId(other.getExternalId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13490,6 +14206,58 @@ public final class CourseworkCertificate {
         onChanged();
         return this;
       }
+
+      private int idAnalitico_ ;
+      /**
+       * <code>int32 id_analitico = 9;</code>
+       */
+      public int getIdAnalitico() {
+        return idAnalitico_;
+      }
+      /**
+       * <code>int32 id_analitico = 9;</code>
+       */
+      public Builder setIdAnalitico(int value) {
+        
+        idAnalitico_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 id_analitico = 9;</code>
+       */
+      public Builder clearIdAnalitico() {
+        
+        idAnalitico_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int externalId_ ;
+      /**
+       * <code>int32 external_id = 10;</code>
+       */
+      public int getExternalId() {
+        return externalId_;
+      }
+      /**
+       * <code>int32 external_id = 10;</code>
+       */
+      public Builder setExternalId(int value) {
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 external_id = 10;</code>
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = 0;
+        onChanged();
+        return this;
+      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
@@ -13565,6 +14333,11 @@ public final class CourseworkCertificate {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_data_analytics_contenido_analitico_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_data_analytics_editar_contenido_analitico_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_data_analytics_editar_contenido_analitico_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_data_analytics_firma_digital_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13632,32 +14405,39 @@ public final class CourseworkCertificate {
       "ics.aprobacion\022\020\n\010promedio\030! \001(\002\022\025\n\robse" +
       "rvaciones\030\" \001(\t\022>\n\023firmas_electronicas\030#" +
       " \003(\0132!.data_analytics.firma_electronica\022" +
-      "\023\n\013external_id\030$ \001(\005\"\343\001\n\rfirma_digital\022\035",
-      "\n\025cuit_firmante_digital\030\001 \001(\t\022\027\n\017algorit" +
-      "mo_firma\030\002 \001(\t\022\034\n\024algoritmo_firma_hash\030\003" +
-      " \001(\t\022>\n\032fecha_hora_firma_algoritmo\030\004 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022\026\n\016huella_d" +
-      "igital\030\005 \001(\t\022$\n\034certificado_publico_firm" +
-      "ante\030\006 \001(\t\"\245\001\n\023analitico_respuesta\022\024\n\014id" +
-      "_analitico\030\001 \001(\005\022\021\n\tid_estado\030\002 \001(\005\022\026\n\016m" +
-      "ensaje_estado\030\003 \001(\t\022\026\n\016tipo_documento\030\004 " +
-      "\001(\005\022\021\n\tdocumento\030\005 \001(\t\022\016\n\006genero\030\006 \001(\t\022\022" +
-      "\n\nfecha_hora\030\007 \001(\t\" \n\010consulta\022\024\n\014id_ana",
-      "litico\030\001 \001(\005\"\312\001\n\022consulta_respuesta\022\021\n\ti" +
-      "d_estado\030\001 \001(\005\022\026\n\016tipo_documento\030\002 \001(\005\022\021" +
-      "\n\tdocumento\030\003 \001(\t\022\016\n\006genero\030\004 \001(\t\022\024\n\014num" +
-      "ero_serie\030\005 \001(\t\022\022\n\nfecha_hora\030\006 \001(\t\022(\n a" +
-      "pellido_nombre_firmante_digital\030\007 \001(\t\022\022\n" +
-      "\nurl_titulo\030\010 \001(\t2\326\002\n\tservicios\022_\n\031consu" +
-      "lta_analitico_stream\022\030.data_analytics.co" +
-      "nsulta\032\".data_analytics.consulta_respues" +
-      "ta\"\000(\0010\001\022s\n!enviar_analitico_con_firma_s" +
-      "tream\022#.data_analytics.analitico_con_fir",
-      "ma\032#.data_analytics.analitico_respuesta\"" +
-      "\000(\0010\001\022s\n!enviar_analitico_sin_firma_stre" +
-      "am\022#.data_analytics.contenido_analitico\032" +
-      "#.data_analytics.analitico_respuesta\"\000(\001" +
-      "0\001b\006proto3"
+      "\023\n\013external_id\030$ \001(\005\"j\n\032editar_contenido",
+      "_analitico\022\n\n\002id\030\001 \001(\005\022@\n\023contenido_anal" +
+      "itico\030\002 \001(\0132#.data_analytics.contenido_a" +
+      "nalitico\"\343\001\n\rfirma_digital\022\035\n\025cuit_firma" +
+      "nte_digital\030\001 \001(\t\022\027\n\017algoritmo_firma\030\002 \001" +
+      "(\t\022\034\n\024algoritmo_firma_hash\030\003 \001(\t\022>\n\032fech" +
+      "a_hora_firma_algoritmo\030\004 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022\026\n\016huella_digital\030\005 \001(\t" +
+      "\022$\n\034certificado_publico_firmante\030\006 \001(\t\"\245" +
+      "\001\n\023analitico_respuesta\022\024\n\014id_analitico\030\001" +
+      " \001(\005\022\021\n\tid_estado\030\002 \001(\005\022\026\n\016mensaje_estad",
+      "o\030\003 \001(\t\022\026\n\016tipo_documento\030\004 \001(\005\022\021\n\tdocum" +
+      "ento\030\005 \001(\t\022\016\n\006genero\030\006 \001(\t\022\022\n\nfecha_hora" +
+      "\030\007 \001(\t\" \n\010consulta\022\024\n\014id_analitico\030\001 \001(\005" +
+      "\"\365\001\n\022consulta_respuesta\022\021\n\tid_estado\030\001 \001" +
+      "(\005\022\026\n\016tipo_documento\030\002 \001(\005\022\021\n\tdocumento\030" +
+      "\003 \001(\t\022\016\n\006genero\030\004 \001(\t\022\024\n\014numero_serie\030\005 " +
+      "\001(\t\022\022\n\nfecha_hora\030\006 \001(\t\022(\n apellido_nomb" +
+      "re_firmante_digital\030\007 \001(\t\022\022\n\nurl_titulo\030" +
+      "\010 \001(\t\022\024\n\014id_analitico\030\t \001(\005\022\023\n\013external_" +
+      "id\030\n \001(\0052\322\003\n\tservicios\022_\n\031consulta_anali",
+      "tico_stream\022\030.data_analytics.consulta\032\"." +
+      "data_analytics.consulta_respuesta\"\000(\0010\001\022" +
+      "s\n!enviar_analitico_con_firma_stream\022#.d" +
+      "ata_analytics.analitico_con_firma\032#.data" +
+      "_analytics.analitico_respuesta\"\000(\0010\001\022s\n!" +
+      "enviar_analitico_sin_firma_stream\022#.data" +
+      "_analytics.contenido_analitico\032#.data_an" +
+      "alytics.analitico_respuesta\"\000(\0010\001\022z\n!edi" +
+      "tar_analitico_sin_firma_stream\022*.data_an" +
+      "alytics.editar_contenido_analitico\032#.dat",
+      "a_analytics.analitico_respuesta\"\000(\0010\001b\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13702,30 +14482,36 @@ public final class CourseworkCertificate {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_data_analytics_contenido_analitico_descriptor,
         new java.lang.String[] { "Genero", "TipoDocumento", "Documento", "Apellidos", "Nombres", "Cuil", "NacimientoAlumnoFechaAnio", "NacimientoAlumnoLocalidad", "NacimientoAlumnoProvincia", "NacimientoAlumnoPais", "IdProvincia", "Provincia", "Establecimiento", "Cueanexo", "DireccionCueanexo", "LocalidadCueanexo", "DepartamentoCueanexo", "CpCueanexo", "TipoCertificado", "TituloObtenido", "IdTitulo", "IdNivel", "FechaEgreso", "LeyProvincial", "CarteraEducativa", "AreaCarteraEducativa", "NormativaJurisdiccional", "NormativaRm", "NormativaDis", "LibroMatriz", "Folio", "Aprobaciones", "Promedio", "Observaciones", "FirmasElectronicas", "ExternalId", });
-    internal_static_data_analytics_firma_digital_descriptor =
+    internal_static_data_analytics_editar_contenido_analitico_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_data_analytics_editar_contenido_analitico_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_data_analytics_editar_contenido_analitico_descriptor,
+        new java.lang.String[] { "Id", "ContenidoAnalitico", });
+    internal_static_data_analytics_firma_digital_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_data_analytics_firma_digital_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_data_analytics_firma_digital_descriptor,
         new java.lang.String[] { "CuitFirmanteDigital", "AlgoritmoFirma", "AlgoritmoFirmaHash", "FechaHoraFirmaAlgoritmo", "HuellaDigital", "CertificadoPublicoFirmante", });
     internal_static_data_analytics_analitico_respuesta_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_data_analytics_analitico_respuesta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_data_analytics_analitico_respuesta_descriptor,
         new java.lang.String[] { "IdAnalitico", "IdEstado", "MensajeEstado", "TipoDocumento", "Documento", "Genero", "FechaHora", });
     internal_static_data_analytics_consulta_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_data_analytics_consulta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_data_analytics_consulta_descriptor,
         new java.lang.String[] { "IdAnalitico", });
     internal_static_data_analytics_consulta_respuesta_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_data_analytics_consulta_respuesta_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_data_analytics_consulta_respuesta_descriptor,
-        new java.lang.String[] { "IdEstado", "TipoDocumento", "Documento", "Genero", "NumeroSerie", "FechaHora", "ApellidoNombreFirmanteDigital", "UrlTitulo", });
+        new java.lang.String[] { "IdEstado", "TipoDocumento", "Documento", "Genero", "NumeroSerie", "FechaHora", "ApellidoNombreFirmanteDigital", "UrlTitulo", "IdAnalitico", "ExternalId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
